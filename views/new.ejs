@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") -%>
+<div class="new logo">
+    <img src="<%= '/images/logo.png' %>" alt="logo">
+    <p>Books Read</p>
+</div>
+<div class="newbody">
+    <% if (locals.exist){%>
+        <h2>Hello admin! Welcome Back!</h2>
+        <h3>Wish to update review of books?</h3>
+        <form class="add" method="POST" action="/add">
+            <input type="text" name="isbn" placeholder="ISBN Number" value="<%=exist.isbn%>">
+            <input type="text" name="title" placeholder="Book Title" value="<%=exist.title%>">
+            <input type="text" name="author" placeholder="Author of the book" value="<%=exist.author%>">
+            <input type="text" name="rating" placeholder="Rating out of 5" value="<%=exist.rating%>">
+            <textarea name="review" placeholder="Short two line summary"><%=exist.review%></textarea>
+            <button type="submit">Update</button>
+        </form>
+    <%}else{%>
+        <h2>Hello admin! Welcome Back!</h2>
+        <h3>Wish to add review of new books?</h3>
+        <form class="add" method="POST" action="/add">
+            <input type="text" name="isbn" placeholder="ISBN Number">
+            <input type="text" name="title" placeholder="Book Title">
+            <input type="text" name="author" placeholder="Author of the book">
+            <input type="text" name="rating" placeholder="Rating out of 5">
+            <textarea name="review" placeholder="Short two line summary"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    <%}%>
+</div>
+<%- include("partials/footer.ejs") -%>
