@@ -12,5 +12,6 @@ Packages need: import express, pg, body-parser, axios, ejs
 # localhost
 localhost:3000
 
-adminusername: riley
-adminpassword: 11
+# admin info
+username: riley
+password: 11
