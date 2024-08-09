@@ -8,3 +8,9 @@ Press 'npm i' to install any packages you need in terminal
 then press 'nodemon index.js' to run this project, if there are some ERRORS, console.log will help to display.
 
 Packages need: import express, pg, body-parser, axios, ejs
+
+# localhost
+localhost:3000
+
+adminusername: riley
+adminpassword: 11
